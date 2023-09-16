@@ -172,7 +172,7 @@ public class SignUp extends javax.swing.JFrame {
 
         rSMaterialButtonCircle1.setBackground(new java.awt.Color(204, 153, 0));
         rSMaterialButtonCircle1.setText("Sign up");
-        jPanel2.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 170, 70));
+        jPanel2.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 210, 70));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 10, 420, 600));
 
