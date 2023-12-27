@@ -7,8 +7,11 @@ package com.mycompany.bank.management.system;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -339,7 +342,18 @@ PreparedStatement pst;
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        String sql = "update * "
+        String newName = jTextField3.getText();
+        String username = jTextField1.getText();
+        String sql = "update Account set Name=? where Acc=?";
+    try {
+        pst = conn.prepareStatement(sql);
+        pst.setString(1, newName);
+         pst.setString(2, username);
+        pst.execute();
+    } catch (SQLException ex) {
+        Logger.getLogger(My_page.class.getName()).log(Level.SEVERE, null, ex);
+    }
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
